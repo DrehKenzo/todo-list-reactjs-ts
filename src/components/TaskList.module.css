@@ -1,0 +1,186 @@
+.taskList {
+  margin-top: -1.5rem;
+  width: 100%;
+}
+
+.taskItem.completed{
+  text-decoration: line-through;
+}
+
+.inputGroup {
+  display: grid;
+  grid-template-columns: 1fr 90px;
+  gap: 8px;
+
+  margin-bottom: 4rem;
+}
+
+.inputGroup input[type="text"] {
+  height: 3.25rem;
+  background: var(--gray-500);
+  color: var(--white);
+  border: 1px solid var(--gray-700);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.inputGroup button[type="submit"] {
+  height: 3.25rem;
+  background: var(--blue-600);
+  color: var(--gray-100);
+  font-size: 0.875rem;
+  line-height: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 0.4rem;
+
+  transition: background 0.2s;
+}
+
+.inputGroup button[type="submit"]:hover {
+  background: var(--blue-400);
+}
+
+.taskDescription {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.taskCreated,
+.taskComplete {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.taskCreated strong {
+  color: var(--blue-400);
+  font-size: 0.875rem;
+}
+
+.taskComplete strong {
+  color: var(--purple-400);
+  font-size: 0.875rem;
+}
+
+.taskCreated span,
+.taskComplete span {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--gray-200);
+  background: var(--gray-400);
+  border-radius: 25px;
+  padding: 0.125rem 0.5rem;
+}
+
+.taskItem {
+  background: var(--gray-500);
+  border: 1px solid var(--gray-400);
+  filter: drop-shadow(0px 2px 8px rgba(0, 0, 0, 0.06));
+  border-radius: 8px;
+
+  display: grid;
+  align-items: flex-start;
+  grid-template-columns: 24px 1fr 24px;
+  gap: 0 12px;
+
+  padding: 1rem;
+}
+
+.taskItem + .taskItem {
+  margin-top: 0.75rem;
+}
+
+.checkboxContainer {
+  position: relative;
+  margin-top: 0.25rem;
+}
+
+.checkboxContainer input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  cursor: pointer;
+}
+
+.checkboxContainer input[type="checkbox"]:hover ~ .checkmark {
+  background: rgba(30, 111, 159, 0.08);
+  border-color: var(--blue-600);
+}
+
+.checkboxContainer input[type="checkbox"]:checked ~ .checkmark {
+  background: var(--purple-600);
+  border-color: var(--purple-600);
+}
+
+.checkboxContainer input[type="checkbox"]:checked:hover ~ .checkmark {
+  background: var(--purple-400);
+  border-color: var(--purple-400);
+}
+
+.checkboxContainer input[type="checkbox"]:checked ~ .checkmark svg {
+  visibility: visible;
+}
+
+.checkmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 1.063rem;
+  width: 1.063rem;
+
+  border: 2px solid var(--blue-400);
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.checkmark svg {
+  color: var(--white);
+  visibility: hidden;
+}
+
+.taskDelete {
+  line-height: 18px;
+  background: transparent;
+  color: var(--gray-300);
+  border-radius: 4px;
+  height: 1.5rem;
+  padding: 0 0.25rem;
+  border: 0;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background 0.2s ease-out;
+}
+
+.taskDelete:hover {
+  background: var(--gray-400);
+  color: var(--red-500);
+}
+
+.mensage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 4rem 1.5rem;
+
+  border-top: 1px solid #333333;
+  border-radius: 8px;
+}
+
+.mensage img{
+  margin-bottom: 1rem;
+}
